@@ -55,7 +55,7 @@ pipeline {
         stage("QA Approval") {
             steps {
                 echo "Waiting for the approval for QA deployement.."
-                timeout(time: 7, unit: 'SECONDS') {
+                timeout(time: 7, unit: 'HOURS') {
                     input (
                         message: "Do you want to deploy to QA?",
                         ok: "Yes,Go Ahead!",
